@@ -3,8 +3,10 @@
 	Other functionality that isn't part of the rgm module.
 ]]
 
-resource.AddSingleFile("resource/localization/en/ragdollmover_tools.properties")
-resource.AddSingleFile("resource/localization/en/ragdollmover_ui.properties")
+for _, dir in ipairs({"en", "ru", "tr"}) do
+	resource.AddSingleFile("resource/localization/" .. dir .. "/ragdollmover_tools.properties")
+	resource.AddSingleFile("resource/localization/" .. dir .. "/ragdollmover_ui.properties")
+end
 
 local MAX_EDICT_BITS = 13
 
